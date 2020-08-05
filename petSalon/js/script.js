@@ -37,13 +37,13 @@ class Pet{
 
 const scooby=new Pet(" Scooby ", 50, " Dane ", " Dog ", " Male ", " Full Service ", " Shaggy ", " 555-555-5555 ");
 
-const scrappy=new Pet(" Scrappy ", 5, " Dane ", " Dog ", " Male ", " Nails Cut ", " Shaggy ", " 555-555-5555 ");
+const scrappy=new Pet(" Scrappy ", 5, " Dane ", " Dog ", " Male ", " Nails Cut ", " Shaggy ", " 666-666-6666 ");
 
-const lady=new Pet(" Lady ", 10, " Corgi ", " Dog ", " Female ", " Hair Cut ", " Fred ", " 555-555-5555 ");
+const lady=new Pet(" Lady ", 10, " Corgi ", " Dog ", " Female ", " Hair Cut ", " Fred ", " 777-777-7777 ");
 
-const tramp=new Pet(" Tramp ", 15, " Mutt ", " Dog ", " Male ", " Shots ", " Velma ", " 555-555-5555 ");
+const tramp=new Pet(" Tramp ", 15, " Mutt ", " Dog ", " Male ", " Shots ", " Velma ", " 888-888-8888 ");
 
-const cali=new Pet(" Cali ", 4, " Calico ", " Cat ", " Female ", " De-clawing ", " Jim Carrey ", " 555-555-5555 ");
+const cali=new Pet(" Cali ", 4, " Calico ", " Cat ", " Female ", " De-clawing ", " Jim Carrey ", " 999-999-9999 ");
 
 
 //add pets to array
@@ -60,6 +60,7 @@ console.log(salon.pets.length);
 
 //for loop
 
+// A loop to pull just pet names
 function petNames(){
 
 let namePet="";
@@ -71,14 +72,80 @@ for(var i=0; i<salon.pets.length; i++){
 let namePet = petNames();
 console.log(namePet);
 
-//for of loop
+// A loop to pull just owner names
 
-// for(let names of salon.pets){
-//     console.log(names);
-// }
+function ownerNames(){
 
-// For each loop
+    let nameOwner="";
+    for(var i=0; i<salon.pets.length; i++){
+        nameOwner += salon.pets[i].ownerName;
+    }
+        return nameOwner;
+    }
+    let nameOwner = ownerNames();
+    console.log(nameOwner);
 
-// salon.pets.forEach(function(pets, index, array){
-//     console.log(array);
-// });
+// A loop to pull the age of the pet
+
+// function petAge(){
+
+//     let agePet=0;
+//     for(var i=0; i<salon.pets.length; i++){
+//         agePet += salon.pets[i].age;
+//     }
+//         return agePet;
+//     }
+//     let agePet = petAge();
+//     console.log(agePet);
+
+// A loop to pull the pets breed
+
+function petBreed(){
+
+    let breedPet="";
+    for(var i=0; i<salon.pets.length; i++){
+        breedPet += salon.pets[i].breed;
+    }
+        return breedPet;
+    }
+    let breedPet = petBreed();
+    console.log(breedPet);
+
+// A loop to pull what type of animal it is
+
+function petType(){
+
+    let typePet="";
+    for(var i=0; i<salon.pets.length; i++){
+        typePet += salon.pets[i].type;
+    }
+        return typePet;
+    }
+    let typePet = petType();
+    console.log(typePet);
+
+// A loop to pull what service the animal is getting
+
+function petService(){
+
+    let servicePet="";
+    for(var i=0; i<salon.pets.length; i++){
+        servicePet += salon.pets[i].service;
+    }
+        return servicePet;
+    }
+    let servicePet = petService();
+    console.log(servicePet);
+
+// A loop to pull owners contact number
+
+function contactPhone(){
+
+    let phoneContact="";
+    for(var i=0; i<salon.pets.length; i++){
+        phoneContact += salon.pets[i].contactPhone;
+    }
+        return phoneContact;
+    }
+    let phoneContact = contactPhone();
+    console.log(phoneContact);
